@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - News Page</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/src/img/favicon/favicon.ico">
+
+    <!-- Tailwind CSS -->
+    <link rel="stylesheet" href="/dist/output.css">
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/1e4a5c6259.js" crossorigin="anonymous"></script>
+</head>
+
+<body class="min-h-screen">
+    <main class="lg:px-64 md:px-32 sm:px-16 px-8 py-12">
+        <!-- Header -->
+        <header id="main_header">
+            <div class="mb-10 border-l-4 border-indigo-500 px-2">
+                <h1 class="text-3xl font-bold underline">
+                    Blog
+                </h1>
+                <h2 class="text-2xl font-normal">New Tech Sharing</h2>
+            </div>
+
+            <nav class="bg-neutral-700 text-white px-8 py-2 min-w-min">
+                <ul class="flex gap-4 text-lg lg:flex-row flex-col lg:items-center" data-dropdown="dropdown-level-1"
+                    data-dropdown-level="1" id="nav-list">
+                    <li class="whitespace-nowrap px-3 py-2 rounded-md relative" data-navbar-page="home">
+                        <a href="/src/pages/index.html" class="before:absolute before:inset-x-0 before:inset-y-0">Home</a>
+                    </li>
+                    <li class="dropdown-item-level-1 relative whitespace-nowrap px-3 py-2 rounded-md"
+                        data-dropdown-item="dropdown-level-1-item-news" data-navbar-page="news" data-navbar-state="active">
+                        <a href="#"
+                            class="before:absolute before:inset-x-0 before:inset-y-0 pointer-events-none ">News</a>
+                        <ul class="lg:w-48 lg:absolute lg:z-50 lg:-left-1 lg:top-full lg:mt-2 lg:shadow-lg text-white lg:text-neutral-700 p-4 hidden lg:bg-white"
+                            data-dropdown="dropdown-level-2" data-dropdown-parent="news">
+                            <!-- <li class="relative pr-3 py-2 border-b-2 border-y-transparent" data-navbar-page="interview">
+                                <a href="pages/posts/interview.html"
+                                    class="before:absolute before:inset-x-0 before:inset-y-0">Interview</a>
+                            </li>
+                            <li class="relative pr-3 py-2 mt-2 border-b-2 border-y-transparent"
+                                data-navbar-page="workshop"><a href="pages/posts/workshop.html"
+                                    class="before:absolute before:inset-x-0 before:inset-y-0">Workshop</a></li>
+                            <li class="relative pr-3 py-2 mt-2 border-b-2 border-y-transparent"
+                                data-navbar-page="expert_suggestion"><a href="pages/posts/expert_suggestion.html"
+                                    class="before:absolute before:inset-x-0 before:inset-y-0">Expert Suggestion</a></li>
+                            <li class="relative pr-3 py-2 mt-2 border-b-2 border-y-transparent"
+                                data-navbar-page="programming"><a href="pages/posts/programming.html"
+                                    class="before:absolute before:inset-x-0 before:inset-y-0">Programming</a></li>
+                            <li class="relative pr-3 py-2 mt-2 border-b-2 border-y-transparent" data-navbar-page="hr"><a
+                                    href="pages/posts/hr.html"
+                                    class="before:absolute before:inset-x-0 before:inset-y-0">HR</a></li> -->
+                        </ul>
+                    </li>
+                    <!-- <li class="dropdown-item-level-1 relative whitespace-nowrap px-3 py-2 rounded-md"
+                        data-dropdown-item="dropdown-level-1-item-news-2" data-navbar-page="news-2">
+                        <a href="#" class="before:absolute before:inset-x-0 before:inset-y-0 pointer-events-none">News
+                            2</a>
+                        <ul class="lg:absolute lg:z-50 lg:-left-1 lg:top-full lg:mt-2 lg:shadow-lg text-white lg:text-neutral-700 p-4 hidden lg:bg-white"
+                            data-dropdown="dropdown-level-2">
+                            <li class="relative pr-3 py-2 border-b-2 border-y-transparent"><a href="#"
+                                    class="before:absolute before:inset-x-0 before:inset-y-0">Interview 2</a></li>
+                            <li class="relative pr-3 py-2 mt-2 border-b-2 border-y-transparent"><a href="#"
+                                    class="before:absolute before:inset-x-0 before:inset-y-0">Workshop 2</a></li>
+                            <li class="relative pr-3 py-2 mt-2 border-b-2 border-y-transparent"><a href="#"
+                                    class="before:absolute before:inset-x-0 before:inset-y-0">Expert Suggestion 2</a>
+                            </li>
+                            <li class="relative pr-3 py-2 mt-2 border-b-2 border-y-transparent"><a href="#"
+                                    class="before:absolute before:inset-x-0 before:inset-y-0">Programming 2</a></li>
+                        </ul>
+                    </li> -->
+                    <!-- <li class="whitespace-nowrap px-3 py-2 rounded-md relative" data-navbar-page="Bookmark">
+                        <a href="/src/pages/user/bookmarks.html" class="before:absolute before:inset-x-0 before:inset-y-0">Bookmarks</a>
+                    </li> -->
+
+                    <!-- <li class="dropdown-item-level-1 relative whitespace-nowrap px-3 py-2 rounded-md ml-auto"
+                    data-dropdown-item="dropdown-level-1-item-news" data-navbar-page="uesr-profile" id="auth_user_container">
+                    </li> -->
+                </ul>
+            </nav>
+
+            <div class="breadcrumb mt-2" id="breadcrumb">
+                <!-- <div class="test"></div>
+                <ul class="breadcrumb-list flex items-center">
+                    <li class="breadcrumb-list__item"><a href="../../index.html">Home</a></li>
+                    <li class="breadcrumb-list__item breadcrumb-list__item--active">Interview</li>
+                </ul> -->
+            </div>
+        </header>
+
+        <!-- Section -->
+        <section class="mt-6">
+            <div class="topic-title mt-3 mb-8" id="main_topic_container">
+                <!-- <h1 class="border-b-4 border-indigo-500 pr-4 text-2xl font-bold inline-flex" id="topic_main_heading"></h1> -->
+            </div>
+            <div
+                class="new-posts grid lg:grid-rows-2 md:grid-rows-1 lg:grid-cols-4 md:grid-cols-3 gap-x-4 gap-y-4 min-h-[500px]" id="article_banner_container">
+                <!-- <div
+                    class="post-card relative row-span-2 col-span-2 flex flex-col justify-end px-4 py-4 text-white overflow-hidden">
+                    <a href="#" class="post-card__title text-2xl font-bold">Vì sao lương khủng, đãi ngộ tốt vẫn khó
+                        tuyển IT?</a>
+                    <a href="#" class="post-card__time">August 9, 2023</a>
+                    <a href="details.html" class="post-card__link"></a>
+                    <div
+                        class="post-card-bg bg-[url('/src/img/interview/trending/techtuyendungtopdev.png')] bg-no-repeat bg-cover">
+                    </div>
+                    <div class="black-filter"></div>
+                </div>
+                <div class="post-card relative flex flex-col justify-end px-4 py-4 text-white overflow-hidden">
+                    <a href="#" class="post-card__title font-bold">Chia sẻ bí kiếp làm freelancer - Nhân đôi thu nhập
+                        hiệu quả</a>
+                    <a href="#" class="post-card__time">August 15, 2023</a>
+                    <a href="#" class="post-card__link"></a>
+                    <div
+                        class="post-card-bg bg-[url('/src/img/interview/trending/chia-se-bi-kip-lam-freelancer.png')] bg-no-repeat bg-cover">
+                    </div>
+                    <div class="black-filter"></div>
+                </div>
+                <div class="post-card relative flex flex-col justify-end px-4 py-4 text-white overflow-hidden">
+                    <a href="#" class="post-card__title font-bold">Top 5 câu hỏi phỏng vấn CTO nhất định bạn phải
+                        biết</a>
+                    <a href="#" class="post-card__time">June 7, 2023</a>
+                    <a href="#" class="post-card__link"></a>
+                    <div class="post-card-bg bg-[url('/src/img/interview/trending/cto.png')] bg-no-repeat bg-cover">
+                    </div>
+                    <div class="black-filter"></div>
+                </div>
+                <div
+                    class="post-card relative flex flex-col justify-end px-4 py-4 text-white overflow-hidden col-span-2">
+                    <a href="#" class="post-card__title text-2xl font-bold">Bật mí top câu hỏi phỏng vấn Game Artist
+                        thường gặp nhất</a>
+                    <a href="#" class="post-card__time">May 18, 2023</a>
+                    <a href="#" class="post-card__link"></a>
+                    <div
+                        class="post-card-bg bg-[url('/src/img/interview/trending/cau-hoi-phong-van-game-artist.png')] bg-no-repeat bg-cover">
+                    </div>
+                    <div class="black-filter"></div>
+                </div> -->
+            </div>
+
+            <div class="topic mt-12 mb-8 flex lg:flex-row flex-col gap-8 justify-between">
+                <div class="main-topic" id="topic_container">
+                    <!-- <div class="topic-container flex flex-col gap-12" data-topic-content="Interview">
+                        <div class="topic-card">
+                            <div
+                                class="topic-card__img bg-[url('/src/img/top-5-cau-hoi-phong-van-manual-tester.png')] bg-no-repeat bg-cover">
+                                <a href="#" title="Vượt ải interview với top 5 câu hỏi phỏng vấn Manual Tester"
+                                    class="topic-card__img__link"></a>
+                            </div>
+                            <div class="topic-card__info">
+                                <div class="topic-card__info__title"><a href="#"
+                                        title="Vượt ải interview với top 5 câu hỏi phỏng vấn Manual Tester">Vượt ải
+                                        interview với top 5 câu hỏi phỏng vấn Manual Tester</a></div>
+                                <div class="topic-card__info__date">July 12, 2023</div>
+                                <div class="topic-card__info__content">
+                                    <p>
+                                        Phỏng vấn Manual Tester cần chuẩn bị những kiến thức gì? Bài viết này sẽ
+                                        cung cấp một số kiến thức tổng quan giúp bạn chuẩn bị tốt hơn trước khi bước
+                                        vào buổi phỏng vấn Manual Tester.
+                                    </p>
+                                    <p>
+                                        Manual Tester nói riêng và tester nói chung là những vị trí không thể thiếu
+                                        trong team development. Bản thân họ là người chịu trách nhiệm cũng như góp
+                                        phần đóng góp cho sự thành công của product.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="topic-card">
+                            <div
+                                class="topic-card__img bg-[url('/src/img/System-Administrator.jpg')] bg-no-repeat bg-cover">
+                                <a href="#" title="Câu hỏi phỏng vấn System Admin và cách trả lời ghi điểm"
+                                    class="topic-card__img__link"></a>
+                            </div>
+                            <div class="topic-card__info">
+                                <div class="topic-card__info__title"><a href="#"
+                                        title="Câu hỏi phỏng vấn System Admin và cách trả lời ghi điểm">Câu hỏi
+                                        phỏng vấn System Admin và cách trả lời ghi điểm</a></div>
+                                <div class="topic-card__info__date">July 11, 2023</div>
+                                <div class="topic-card__info__content">
+                                    <p>
+                                        System Admin hay quản trị viên hệ thống là những người chịu trách nhiệm
+                                        thiết lập và bảo trì hệ thống máy tính, đặc biệt là máy chủ trong mạng của
+                                        công ty; đảm bảo hệ thống hoạt động, vận hành một cách trơn tru và an toàn.
+                                        Với vai trò quan trọng đó thì các nhà tuyển dụng luôn ưu tiên những ứng viên
+                                        có kinh nghiệm và kiến thức tốt, với đòi hỏi cao khi phỏng vấn. Bài viết hôm
+                                        nay chúng ta cùng tìm hiểu về những câu hỏi phỏng vấn vị trí System Admin
+                                        thường gặp để có thể chuẩn bị tốt nhất nhằm chinh phục được nhà tuyển dụng
+                                        nhé.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="topic-card">
+                            <div class="topic-card__img bg-[url('/src/img/iot_devices.png')] bg-no-repeat bg-cover">
+                                <a href="#" title="Tuyển tập bộ câu hỏi phỏng vấn IoT Engineer hay nhất"
+                                    class="topic-card__img__link"></a>
+                            </div>
+                            <div class="topic-card__info">
+                                <div class="topic-card__info__title"><a href="#"
+                                        title="Tuyển tập bộ câu hỏi phỏng vấn IoT Engineer hay nhất">Tuyển tập bộ
+                                        câu hỏi phỏng vấn IoT Engineer hay nhất</a></div>
+                                <div class="topic-card__info__date">June 29, 2023</div>
+                                <div class="topic-card__info__content">
+                                    <p>
+                                        IoT (Internet of thing), vạn vật kết nối internet đã không còn là khái niệm
+                                        xa lạ trong thế kỷ 20, vậy phỏng vấn IoT Engineer có gì đặc biệt?
+                                    </p>
+                                    <p>
+                                        Những kiến thức nào là bắt buộc? Cần chuẩn bị gì để ứng tuyển vị trí IoT
+                                        Engineer? Tất cả sẽ được trình bày trong bài viết dưới đây.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="topic-card">
+                            <div class="topic-card__img bg-[url('/src/img/Database.png')] bg-no-repeat bg-cover">
+                                <a href="#" title="Câu hỏi phỏng vấn Database Developer/ Database Administrator thường gặp"
+                                    class="topic-card__img__link"></a>
+                            </div>
+                            <div class="topic-card__info">
+                                <div class="topic-card__info__title"><a href="#"
+                                        title="Câu hỏi phỏng vấn Database Developer/ Database Administrator thường gặp">Câu
+                                        hỏi phỏng vấn Database Developer/ Database Administrator thường gặp</a>
+                                </div>
+                                <div class="topic-card__info__date">June 23, 2023</div>
+                                <div class="topic-card__info__content">
+                                    <p>
+                                        Với sự phát triển của công nghệ, trí thông minh nhân tạo AI và dữ liệu lớn
+                                        Big Data thì ngành lập trình viên cơ sở dữ liệu Database Developer đang trở
+                                        nên hot với nhu cầu tuyển dụng và chỗ độ đãi ngộ cao từ các công ty, doanh
+                                        nghiệp. Hôm nay chúng ta cùng nhau điểm qua danh sách những câu hỏi cho vị
+                                        trí Database Developer/ Database Administrator thường gặp để có thể chuẩn bị
+                                        tốt nhất cho buổi phỏng vấn của mình nhé.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="topic-card">
+                            <div class="topic-card__img bg-[url('/src/img/data-scientist.jpg')] bg-no-repeat bg-cover">
+                                <a href="#" title="Gợi ý trả lời câu hỏi phỏng vấn Data Scientist hay nhất"
+                                    class="topic-card__img__link"></a>
+                            </div>
+                            <div class="topic-card__info">
+                                <div class="topic-card__info__title"><a href="#"
+                                        title="Gợi ý trả lời câu hỏi phỏng vấn Data Scientist hay nhất">Gợi ý trả
+                                        lời câu hỏi phỏng vấn Data Scientist hay nhất</a></div>
+                                <div class="topic-card__info__date">June 23, 2023</div>
+                                <div class="topic-card__info__content">
+                                    <p>
+                                        Phỏng vấn Data Scientist liệu có phải chỉ là những câu hỏi liên quan tới
+                                        giải thuật và phân tích dữ liệu?
+                                    </p>
+                                    <p>
+                                        Lựa chọn bước đi trên con đường làm Data Scientist, mong rằng bộ câu hỏi
+                                        dưới đây có thể giúp đỡ bạn phần nào trong quá trình phỏng vấn và ứng tuyển
+                                        vị trí Data Scientist.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="topic-card">
+                            <div class="topic-card__img bg-[url('/src/img/it_consultant.jpg')] bg-no-repeat bg-cover">
+                                <a href="#" title="Tips trả lời câu hỏi phỏng vấn IT Consultant hay nhất"
+                                    class="topic-card__img__link"></a>
+                            </div>
+                            <div class="topic-card__info">
+                                <div class="topic-card__info__title"><a href="#"
+                                        title="Tips trả lời câu hỏi phỏng vấn IT Consultant hay nhất">Tips trả lời
+                                        câu hỏi phỏng vấn IT Consultant hay nhất</a></div>
+                                <div class="topic-card__info__date">June 19, 2023</div>
+                                <div class="topic-card__info__content">
+                                    <p>
+                                        Consultant là thuật ngữ dùng để chỉ đội ngũ tư vấn viên của một doanh nghiệp
+                                        có trách nhiệm đưa ra nhận xét, đánh giá, lời khuyên dựa trên nghiệp vụ và
+                                        chuyên môn. IT Consultant là vị trí có vai trò quan trọng như trên với
+                                        chuyên ngành liên quan đến hệ thống công nghệ thông tin, đòi hỏi cao về kinh
+                                        nghiệm chuyên môn và các kĩ năng giao tiếp với khách hàng. Với yêu cầu đòi
+                                        hỏi cao nên vị trí IT Consultant luôn có mức đãi ngộ rất hậu hĩnh và được
+                                        xem như là đích đến của các kỹ sư IT nói chung. Bài viết hôm nay chúng ta
+                                        cùng tìm hiểu danh sách những câu hỏi phỏng vấn vị trí IT Consultant này
+                                        nhé.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="topic-card">
+                            <div class="topic-card__img bg-[url('/src/img/comtor.jpg')] bg-no-repeat bg-cover">
+                                <a href="#" title="Top 5 câu hỏi phỏng vấn IT Comtor mà bạn sẽ gặp khi xin việc"
+                                    class="topic-card__img__link"></a>
+                            </div>
+                            <div class="topic-card__info">
+                                <div class="topic-card__info__title"><a href="#"
+                                        title="Top 5 câu hỏi phỏng vấn IT Comtor mà bạn sẽ gặp khi xin việc">Top 5
+                                        câu hỏi phỏng vấn IT Comtor mà bạn sẽ gặp khi xin việc</a></div>
+                                <div class="topic-card__info__date">June 19, 2023</div>
+                                <div class="topic-card__info__content">
+                                    <p>
+                                        IT Comtor là vị trí luôn thiếu nhân lực, nhất là mảng thị trường làm việc
+                                        cho các quốc gia như Nhật Bản, Trung Quốc, vậy phỏng vấn IT comtor có khó
+                                        không?
+                                    </p>
+                                    <p>
+                                        Tất cả sẽ được liệt kê qua 5 câu hỏi dưới đây.
+                                    </p>
+                                    <p>
+                                        Rất mong những câu hỏi này sẽ là bước chuẩn bị tốt cho các bạn đang muốn
+                                        apply vào vị trí IT Comtor ở các công ty. Một vị trí khó, không phải ai cũng
+                                        làm được.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+
+                <aside class="aside-topic hidden" id="aside_topic">
+                    <div class="lg:sticky lg:top-10">
+                        <div class="aside-topic__title text-center mb-6">CÓ THỂ BẠN CŨNG QUAN TÂM</div>
+                        <div class="relative-topic lg:w-[300px]" id="relative_articles">
+                            <!-- <ul class="relative-topic__list">
+                                <li class="relative-topic__list__item"><a href="#" class="relative-topic__list__item__link">Lộ trình học công nghệ thông tin hiệu quả cho người mới bắt đầu</a></li>
+                                <li class="relative-topic__list__item"><a href="#" class="relative-topic__list__item__link">KICC HCMC x TOPDEV &#45; Nắm giữ sứ mệnh chắp cánh cho nhân tài IT Việt Nam vươn mình bứt phá</a></li>
+                                <li class="relative-topic__list__item"><a href="#" class="relative-topic__list__item__link">Segment Anything Model &#45; Bước đột phá mới của Meta AI</a></li>
+                                <li class="relative-topic__list__item"><a href="#" class="relative-topic__list__item__link">Tiêu chuẩn kỹ năng nghề quốc gia &#45; Tư vấn viên giải pháp mạng</a></li>
+                                <li class="relative-topic__list__item"><a href="#" class="relative-topic__list__item__link">Tiêu chuẩn kỹ năng nghề quốc gia &#45; Quản trị viên mạng máy tính</a></li>
+                            </ul> -->
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer
+            class="blog-footer lg:-mx-64 md:-mx-32 sm:-mx-16 -mx-8 -my-12 mt-20 lg:px-64 md:px-32 sm:px-16 px-8 py-12">
+            <div class="grid lg:grid-cols-3 grid-cols-1 grid-rows-1 gap-6">
+                <div class="follow">
+                    <h1 class="text-2xl font-bold text-white">Follow Us</h1>
+                    <ul class="social-icon-list flex gap-6 mt-6">
+                        <li class="social-icon-list__item">
+                            <a href="https://www.facebook.com/" class="social-icon-list__item__link"><i
+                                    class="fa-brands fa-facebook-f"></i></a>
+                        </li>
+                        <li class="social-icon-list__item ">
+                            <a href="https://www.linkedin.com/" class="social-icon-list__item__link"><i
+                                    class="fa-brands fa-linkedin-in"></i></a>
+                        </li>
+                        <li class="social-icon-list__item ">
+                            <a href="https://twitter.com/" class="social-icon-list__item__link"><i
+                                    class="fa-brands fa-twitter"></i></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="about-us">
+                    <h1 class="text-2xl font-bold text-white">About Us</h1>
+                    <p class="mt-6"><a href="#" class="text-indigo-400">Blog</a> is a recruitment network and ecosystem
+                        in Mobile & IT fields. We are top leading
+                        recruitment network in Mobile & IT fields, in Vietnam, offering Tech talent solution which meets
+                        your needs. Our networks cover 95% of Tech communities in Vietnam and our clients come from both
+                        Vietnam and South East Asia.</p>
+                </div>
+                <div class="contact">
+                    <h1 class="text-2xl font-bold text-white">Contact</h1>
+                    <p class="mt-6">Hotline: 03xx 8xx xx0</p>
+                    <p>Email: <a href="mailto:sang050901i@gmail.com" class="text-indigo-400">sang050901i@gmail.com</a>
+                    </p>
+                </div>
+            </div>
+            <div class="copyright flex justify-center mt-24">
+                <p>Copyright&copy;2023 Blog</p>
+            </div>
+        </footer>
+
+        <div class="scroll-to-top fixed bottom-10 right-5 hidden" data-scroll="scroll_to_top">
+            <a href="javascript:void(0)" class="px-5 py-4 bg-red-700 text-white"><i class="fa-solid fa-angle-up fa-xl"></i></a>
+        </div>
+    </main>
+    <!-- External JS -->
+    <script type="module" src="/src/lib/js/posts/posts.js"></script>
+</body>
+
+</html>

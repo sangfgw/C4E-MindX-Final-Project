@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Article Detaills Page</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/src/img/favicon/favicon.ico">
+
+    <!-- Tailwind CSS -->
+    <link rel="stylesheet" href="/dist/output.css">
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/1e4a5c6259.js" crossorigin="anonymous"></script>
+</head>
+
+<body class="min-h-screen">
+    <main class="lg:px-64 md:px-32 sm:px-16 px-8 py-12">
+        <!-- Header -->
+        <header>
+            <div class="mb-10 border-l-4 border-indigo-500 px-2">
+                <h1 class="text-3xl font-bold underline">
+                    Blog
+                </h1>
+                <h2 class="text-2xl font-normal">New Tech Sharing</h2>
+            </div>
+
+            <nav class="bg-neutral-700 text-white px-8 py-2 min-w-min">
+                <ul class="flex gap-4 text-lg lg:flex-row flex-col lg:items-center" data-dropdown="dropdown-level-1"
+                    data-dropdown-level="1" id="nav-list">
+                    <li class="whitespace-nowrap px-3 py-2 rounded-md relative" data-navbar-page="home">
+                        <a href="/src/pages/index.html" class="before:absolute before:inset-x-0 before:inset-y-0">Home</a>
+                    </li>
+                    <li class="dropdown-item-level-1 relative whitespace-nowrap px-3 py-2 rounded-md"
+                        data-dropdown-item="dropdown-level-1-item-news" data-navbar-page="news" data-navbar-state="active">
+                        <a href="#"
+                            class="before:absolute before:inset-x-0 before:inset-y-0 pointer-events-none ">News</a>
+                        <ul class="lg:w-48 lg:absolute lg:z-50 lg:-left-1 lg:top-full lg:mt-2 lg:shadow-lg text-white lg:text-neutral-700 p-4 hidden lg:bg-white"
+                            data-dropdown="dropdown-level-2" data-dropdown-parent="news">
+                            <!-- <li class="relative pr-3 py-2 border-b-2 border-y-transparent" data-navbar-page="interview">
+                                <a href="pages/posts/interview.html"
+                                    class="before:absolute before:inset-x-0 before:inset-y-0">Interview</a>
+                            </li>
+                            <li class="relative pr-3 py-2 mt-2 border-b-2 border-y-transparent"
+                                data-navbar-page="workshop"><a href="pages/posts/workshop.html"
+                                    class="before:absolute before:inset-x-0 before:inset-y-0">Workshop</a></li>
+                            <li class="relative pr-3 py-2 mt-2 border-b-2 border-y-transparent"
+                                data-navbar-page="expert_suggestion"><a href="pages/posts/expert_suggestion.html"
+                                    class="before:absolute before:inset-x-0 before:inset-y-0">Expert Suggestion</a></li>
+                            <li class="relative pr-3 py-2 mt-2 border-b-2 border-y-transparent"
+                                data-navbar-page="programming"><a href="pages/posts/programming.html"
+                                    class="before:absolute before:inset-x-0 before:inset-y-0">Programming</a></li>
+                            <li class="relative pr-3 py-2 mt-2 border-b-2 border-y-transparent" data-navbar-page="hr"><a
+                                    href="pages/posts/hr.html"
+                                    class="before:absolute before:inset-x-0 before:inset-y-0">HR</a></li> -->
+                        </ul>
+                    </li>
+                    <!-- <li class="dropdown-item-level-1 relative whitespace-nowrap px-3 py-2 rounded-md"
+                        data-dropdown-item="dropdown-level-1-item-news-2" data-navbar-page="news-2">
+                        <a href="#" class="before:absolute before:inset-x-0 before:inset-y-0 pointer-events-none">News
+                            2</a>
+                        <ul class="lg:absolute lg:z-50 lg:-left-1 lg:top-full lg:mt-2 lg:shadow-lg text-white lg:text-neutral-700 p-4 hidden lg:bg-white"
+                            data-dropdown="dropdown-level-2">
+                            <li class="relative pr-3 py-2 border-b-2 border-y-transparent"><a href="#"
+                                    class="before:absolute before:inset-x-0 before:inset-y-0">Interview 2</a></li>
+                            <li class="relative pr-3 py-2 mt-2 border-b-2 border-y-transparent"><a href="#"
+                                    class="before:absolute before:inset-x-0 before:inset-y-0">Workshop 2</a></li>
+                            <li class="relative pr-3 py-2 mt-2 border-b-2 border-y-transparent"><a href="#"
+                                    class="before:absolute before:inset-x-0 before:inset-y-0">Expert Suggestion 2</a>
+                            </li>
+                            <li class="relative pr-3 py-2 mt-2 border-b-2 border-y-transparent"><a href="#"
+                                    class="before:absolute before:inset-x-0 before:inset-y-0">Programming 2</a></li>
+                        </ul>
+                    </li> -->
+                    <!-- <li class="whitespace-nowrap px-3 py-2 rounded-md relative" data-navbar-page="Bookmark">
+                        <a href="/src/pages/user/bookmarks.html" class="before:absolute before:inset-x-0 before:inset-y-0">Bookmarks</a>
+                    </li> -->
+
+                    <!-- <li class="dropdown-item-level-1 relative whitespace-nowrap px-3 py-2 rounded-md ml-auto"
+                    data-dropdown-item="dropdown-level-1-item-news" data-navbar-page="uesr-profile" id="auth_user_container">
+                    </li> -->
+                </ul>
+            </nav>
+
+            <div class="breadcrumb mt-2" id="breadcrumb">
+                <!-- <ul class="breadcrumb-list flex items-center">
+                    <li class="breadcrumb-list__item"><a href="../../index.html">Home</a></li>
+                    <li class="breadcrumb-list__item"><a href="interview.html">Interview</a></li>
+                    <li class="breadcrumb-list__item breadcrumb-list__item--active">Chat GPT là gì? Những điều cần biết về Chat GPT</li>
+                </ul> -->
+            </div>
+        </header>
+
+        <!-- Section -->
+        <section class="mt-6 flex gap-10 lg:flex-row flex-col-reverse" id="article_section"></section>
+
+        <!-- Footer -->
+        <footer
+            class="blog-footer lg:-mx-64 md:-mx-32 sm:-mx-16 -mx-8 -my-12 mt-20 lg:px-64 md:px-32 sm:px-16 px-8 py-12">
+            <div class="grid lg:grid-cols-3 grid-cols-1 grid-rows-1 gap-6">
+                <div class="follow">
+                    <h1 class="text-2xl font-bold text-white">Follow Us</h1>
+                    <ul class="social-icon-list flex gap-6 mt-6">
+                        <li class="social-icon-list__item">
+                            <a href="https://www.facebook.com/" class="social-icon-list__item__link"><i
+                                    class="fa-brands fa-facebook-f"></i></a>
+                        </li>
+                        <li class="social-icon-list__item ">
+                            <a href="https://www.linkedin.com/" class="social-icon-list__item__link"><i
+                                    class="fa-brands fa-linkedin-in"></i></a>
+                        </li>
+                        <li class="social-icon-list__item ">
+                            <a href="https://twitter.com/" class="social-icon-list__item__link"><i
+                                    class="fa-brands fa-twitter"></i></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="about-us">
+                    <h1 class="text-2xl font-bold text-white">About Us</h1>
+                    <p class="mt-6"><a href="#" class="text-indigo-400">Blog</a> is a recruitment network and ecosystem
+                        in Mobile & IT fields. We are top leading
+                        recruitment network in Mobile & IT fields, in Vietnam, offering Tech talent solution which meets
+                        your needs. Our networks cover 95% of Tech communities in Vietnam and our clients come from both
+                        Vietnam and South East Asia.</p>
+                </div>
+                <div class="contact">
+                    <h1 class="text-2xl font-bold text-white">Contact</h1>
+                    <p class="mt-6">Hotline: 03xx 8xx xx0</p>
+                    <p>Email: <a href="mailto:sang050901i@gmail.com" class="text-indigo-400">sang050901i@gmail.com</a>
+                    </p>
+                </div>
+            </div>
+            <div class="copyright flex justify-center mt-24">
+                <p>Copyright&copy;2023 Blog</p>
+            </div>
+        </footer>
+
+        <div class="scroll-to-top fixed bottom-10 right-5 hidden" data-scroll="scroll_to_top">
+            <a href="javascript:void(0)" class="px-5 py-4 bg-red-700 text-white"><i class="fa-solid fa-angle-up fa-xl"></i></a>
+        </div>
+    </main>
+    <!-- External JS -->
+    <script type="module" src="/src/lib/js/posts/details/details.js"></script>
+</body>
+
+</html>
+
+<!-- <div class=\"topic-container\">
+    <div class=\"topic-title mt-3 mb-8\">
+        <h1 class=\"text-5xl leading-tight inline-flex\">Lập trình bất đồng bộ là gì? Tại sao JavaScript là ngôn ngữ lập trình bất đồng bộ?</h1>
+    </div>
+
+    <div class=\"save-article flex justify-end\" id=\"save_article\">
+        <button type=\"button\" title=\"Save Article\" class=\"save-article-btn hover:scale-125\" id=\"save_article_btn\">
+            <i class=\"fa-regular fa-bookmark fa-xl\" id=\"save_article_icon\"></i>
+        </button>
+    </div>
+
+    <div class=\"topic-content\">
+        <div class=\"topic-content-section\">
+            <h1 class=\"topic-section-title text-3xl mt-8 mb-5\" id=\"section_1\">Vấn đề</h1>
+
+            <div class=\"topic-section-content\">
+                <p class=\"topic-content-paragraph\">
+                    JavaScript là một ngôn ngữ lập trình bất đồng bộ &#45; điều đó ai mà chẳng biết chứ. Hoạt động bất đồng bộ thể hiện rõ nhất qua các hàm bất đồng bộ, tức là các hàm không trả lại kết quả ngay lập tức mà nó sẽ trả về trong một thời điểm “nào đó”.
+                </p>
+                <p class=\"topic-content-paragraph\">
+                    Nếu xuất thân từ một lập trình viên <a href=\"#\" class=\"topic-content-link\">PHP</a>, <a href=\"#\" class=\"topic-content-link\">Go</a> hay thậm chí là <a href=\"#\" class=\"topic-content-link\">Java</a>… có thể bạn chưa nghe hoặc đang còn mơ hồ về khái niệm lập trình bất đồng bộ là như thế nào. Có thể bạn sẽ đặt ra ra câu hỏi là tại sao JavaScript lại là ngôn ngữ bất đồng bộ, liệu nó mang lại lợi ích hay hạn chế gì cho ngôn ngữ này.
+                </p>
+
+                <p class=\"topic-content-paragraph\">
+                    Bài viết ngày hôm nay, tôi sẽ phân tích về việc tại sao JavaScript lại là ngôn ngữ bất đồng bộ. Hay nói cách khác là vì sao nó “nên” là ngôn ngữ lập trình bất đồng bộ.
+                </p>
+            </div>
+        </div>
+
+        <div class=\"topic-content-section\">
+            <h1 class=\"topic-section-title text-3xl mt-8 mb-5\" id=\"section_2\">Lập trình bất đồng bộ là gì?</h1>
+
+            <div class=\"topic-section-content\">
+                <p class=\"topic-content-paragraph\">
+                    Lập trình bất đồng bộ (Asynchronous Programming) là một phương pháp lập trình cho phép các tác vụ được thực hiện độc lập và song song mà không cần chờ đợi các tác vụ khác hoàn thành trước đó. Thay vì đợi cho đến khi một tác vụ hoàn thành và trả về kết quả trước khi bắt đầu tác vụ tiếp theo, lập trình bất đồng bộ cho phép các tác vụ đang chạy cùng một lúc, điều này giúp cải thiện hiệu suất và thời gian phản hồi.
+                </p>
+
+                <p class=\"topic-content-paragraph\">
+                    Trong JavaScript, lập trình bất đồng bộ thể hiện ở các hàm bất đồng bộ, trả lại kết quả thông qua các hàm <a href=\"#\" class=\"topic-content-link\">Callback</a>, <a href=\"#\" class=\"topic-content-link\">Promise</a>, <a href=\"#\" class=\"topic-content-link\">async/await</a>, Event listeners… Ví dụ như các cuộc gọi API được thực hiện bất đồng bộ, các sự kiện từ phía người dùng (move, click, focus…) cũng thế… Tương tự, trong môi trường Node.js chúng ta có các truy vấn đến cơ sở dữ liệu, thao tác với các tệp tin… cũng là những hành động bất đồng bộ.
+                </p>
+
+                <div class=\"topic-content-single-quote border-l-4 border-x-neutral-500 px-4 py-2 relative line-clamp-3\">
+                    <a href=\"#\" class=\"topic-content-link\">6 Lý do Async/Await của Javascript đánh bại Promises</a>
+                </div>
+
+                <div class=\"topic-content-single-quote border-l-4 border-x-neutral-500 px-4 py-2 relative line-clamp-3\">
+                    <a href=\"#\" class=\"topic-content-link\">Xử lý ERROR trong NodeJS sao cho đúng?</a>
+                </div>
+            </div>
+        </div>
+
+        <div class=\"topic-content-section\">
+            <h1 class=\"topic-section-title text-3xl mt-8 mb-5\" id=\"section_3\">Tại sao JavaScript là bất đồng bộ?</h1>
+
+            <div class=\"topic-section-content\">
+                <p class=\"topic-content-paragraph\">
+                    JavaScript ban đầu được thiết kế để chạy trên trình duyệt thông qua các ứng dụng web. Vì đặc thù của trình duyệt cho nên JavaScript phải được thiết kế theo hướng bất đồng bộ để tăng hiệu suất.
+                </p>
+                <p class=\"topic-content-paragraph\">
+                    Hãy thử hình dung tình huống giả sử JavaScript chạy đồng bộ, khi trang web đang được tải và trong quá trình xử lý hiển thị cho người dùng xem thì một lệnh Ajax gọi đến một máy chủ nào đó để lấy dữ liệu về. Khi đó quá trình render sẽ bị “tạm dừng” để chờ kết quả. Sẽ ra sao nếu mạng chậm hoặc máy chủ phản hồi lâu? Trang web sẽ không thể hoạt động một cách bình thường chỉ vì nó phải chờ đợi các hàm mất “nhiều thời gian”.
+                </p>
+
+                <p class=\"topic-content-paragraph\">
+                    Thật may, cuộc gọi Ajax là một hoạt động bất đồng bộ, cho nên quá trình render vẫn có thể diễn ra bình thường.
+                </p>
+
+                <p class=\"topic-content-paragraph\">
+                    Các ứng dụng web là tổ hợp các sự kiện của người dùng. Họ lướt chuột, cuộn lên cuộn xuống trang web, bấm vào nút, nhập nội dung… Để xử lý được, JavaScript phải tạo ra cơ chế “lắng nghe” (Event listeners) sự kiện để thực hiện một tác vụ tương ứng khi nó xảy ra. Điều này không thể nào diễn ra ở lập trình đồng bộ được. Cơ chế Event listeners cho phép lập trình viên tạo ra các hàm xử lý và nó sẽ được gọi khi một hành động nào đó của người dùng diễn ra.
+                </p>
+
+                <p class=\"topic-content-paragraph\">
+                    Nhờ thế mà ngày nay chúng ta có nhiều Framework lập trình bất đồng bộ rất tốt được ra đời như <a href=\"#\" class=\"topic-content-link\">Node.js</a>, <a href=\"#\" class=\"topic-content-link\">Angular</a> và <a href=\"#\" class=\"topic-content-link\">React</a>, giúp lập trình viên phát triển các ứng dụng web hiệu quả và tăng tốc độ phản hồi của ứng dụng.
+                </p>
+
+                <p class=\"topic-content-paragraph\">
+                    Nói tóm lại, JavaScript “nên” được thiết kế theo kiểu bất đồng bộ để đáp ứng nhu cầu của các ứng dụng web hiện đại, cải thiện hiệu suất và tương thích tốt với cấu trúc của trình duyệt.
+                </p>
+            </div>
+
+        </div>
+
+        <div class=\"topic-content-section\">
+            <h1 class=\"topic-section-title text-3xl mt-8 mb-5\" id=\"section_4\">Ưu nhược điểm</h1>
+
+            <div class=\"topic-section-content\">
+                <p class=\"topic-content-paragraph\">
+                    Một trong những ưu điểm lớn nhất của lập trình bất đồng bộ đó là tăng hiệu suất cho các ứng dụng, tăng tốc độ thực thi của các tác vụ trong ứng dụng bằng cách cho phép chúng được thực hiện song song mà không phải chờ đợi các tác vụ khác hoàn thành trước đó. Các tác vụ có thể được thực hiện mà không phải chặn luồng chính của ứng dụng, tránh bị treo máy.
+                </p>
+                <p class=\"topic-content-paragraph\">
+                    Với bất đồng bộ, các tác vụ lớn có thể được chia nhỏ thành các phần nhỏ hơn và được thực hiện đồng thời. Điều này giúp tăng hiệu suất và giảm thời gian thực hiện cho các tác vụ lớn.
+                </p>
+
+                <p class=\"topic-content-paragraph\">
+                    Bên cạnh đó lập trình bất đồng bộ cũng mang lại một số phiền hà nhất định. Đầu tiên là khả năng tiếp cận, làm quen với phong cách bất đồng bộ này, có thể mất một thời gian để hiểu được concept lẫn phong cách của nó.
+                </p>
+
+                <p class=\"topic-content-paragraph\">
+                    Khó khăn trong việc xử lý lỗi và cả gỡ lỗi. Vì các tác vụ được thực hiện đồng thời, cho nên nếu một tác vụ lỗi, các tác vụ khác vẫn chạy bình thường, việc xử lý lỗi lúc này có phần phức tạp hơn. Hoặc nếu tác vụ chồng chéo nhay, việc truy vết lỗi cũng mang lại nhiều khó khăn.
+                </p>
+
+                <p class=\"topic-content-paragraph\">
+                    Cho dù lập trình đồng bộ hay là bất đồng bộ đều đòi hỏi khả năng quản lý tài nguyên chia sẻ. Đối với bất đồng bộ, nhiều tác vụ đồng thời có thể đang cùng truy cập vào tài nguyên dùng chung, cho nên phải có phương án hoặc kĩ năng giải quyết để tránh xung đột.
+                </p>
+            </div>
+        </div>
+
+        <div class=\"topic-content-section\">
+            <h1 class=\"topic-section-title text-3xl mt-8 mb-5\" id=\"section_5\">Tổng kết</h1>
+
+            <div class=\"topic-section-content\">
+                <p class=\"topic-content-paragraph\">
+                    Lập trình bất đồng bộ là một phương pháp lập trình cho phép các tác vụ được thực hiện độc lập và song song mà không cần chờ đợi các tác vụ khác hoàn thành trước đó. JavaScript là một ngôn ngữ lập trình bất đồng bộ, điều này mang lại cho nó nhiều “lợi thế” trong môi trường trình duyệt. Không những thế, Node.js cũng tận dụng được sức mạnh của bất đồng bộ để tạo ra máy chủ có hiệu suất cao. Bên cạnh đó, bất đồng bộ cũng mang lại một số khó khăn nhất định sự thời gian làm quen ban đầu, quá trình xử lý lỗi và quản lý tài nguyên dùng chung.
+                </p>
+
+                <div class=\"author-note\">
+                    <div class=\"author-note__signature author-note__signature--bold\">Bài viết gốc được đăng tải tại <a href=\"#\" class=\"topic-reference-link\">2coffee.dev</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->
