@@ -229,8 +229,16 @@ const loadArticles = async() => {
                 let articlesContent = ``;
     
                 const LIMIT_ARTICLES = 7;
+                let skip_articles = 1;
     
                 articles.every((article, index) => {
+                    // Skip Articles
+                    if (skip_articles > 0) {
+                        skip_articles--;
+                        return true;
+                    }
+
+                    // Define Article Content
                     articlesContent += 
                     `
                         <div class="topic-card">
