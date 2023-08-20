@@ -1,4 +1,4 @@
-# C4E-MindX-Final-Project
+# C4E-MindX-Final-Project (Blog Website)
 This is MindX C4E Course Final Project Repository
 
 ## How to use:
